@@ -6,7 +6,19 @@ namespace ConnectFour
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Validating arguments
+            if (args.Length != 2)
+            {
+                throw new ArgumentException("Invalid number of arguments");
+            }
+
+            else if (!args[1].Equals("--state"))
+            {
+                throw new ArgumentException("Argument must be '--state'");
+            }
+
+            Board board = new Board(args[1]);
+
         }
     }
 }

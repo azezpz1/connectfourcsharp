@@ -3,8 +3,9 @@ namespace ConnectFour
 {
     public class Board
     {
-        public Board()
+        public Board(String state)
         {
+
         }
     }
 }
